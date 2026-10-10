@@ -1,0 +1,7 @@
+var_ckpt_path: checkpoints/QM9/vqvae.pt
+device: cuda
+bs: 1024
+save_path: checkpoints/QM9/latents.h5
+
+hydra:
+  output_subdir: null

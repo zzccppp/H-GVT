@@ -1,0 +1,82 @@
+paper_figures/
+
+# Byte-compiled / optimized / compiled files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+
+# Environments
+.env
+venv/
+env/
+# For pip-tools
+*-requirements.txt
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+# Jupyter Lab state
+.jupyter/
+# Output files
+*.ipynb_checkpoints
+*.html
+*.pdf
+*.csv
+*.json
+*.pkl
+*.feather
+*.parquet
+*.h5
+*.onnx
+*.tf
+*.pth
+*.pt
+*.bin
+*.model
+*.weights
+*.ckpt
+*.pb
+*.tflite
+*.zip
+*.tar
+*.gz
+*.bz2
+*.xz
+
+# Logs
+logs/
+*.log
+
+# Database files
+*.sqlite3
+*.db
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Data files (often large and not suitable for version control)
+data/
+raw_data/
+processed_data/
+
+# Miscellaneous
+temp/
+tmp/
+
+outputs/
+
+wandb/
+multirun

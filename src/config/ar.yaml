@@ -1,0 +1,51 @@
+dataset:
+  save_path: checkpoints/QM9/latents.h5
+
+wandb:
+  project: GVAR_AR_Training
+  group: default
+  tags:
+    - train
+    - demo
+  mode: offline
+
+train:
+  epochs: 20
+  bs: 32
+  ckpt_freq: 5
+  test_freq: 5
+  optimizer:
+    _target_: torch.optim.AdamW
+    lr: 1e-4
+    weight_decay: 1e-5
+  scheduler:
+    _target_: torch.optim.lr_scheduler.CosineAnnealingLR
+    T_max: ${train.epochs}
+    eta_min: 1e-6
+
+seed: 42
+device: cuda
+
+model:
+  gpt:
+    vocab_size: -1
+    n_layer: 8
+    n_head: 8
+    n_embd: 256
+    patch_nums: [1, 2, 4, 8]
+    max_var_len: -1
+    pad_token_id: -1
+    eos_token_id: -1
+    embd_pdrop: 0.1
+    attn_pdrop: 0.1
+    resid_pdrop: 0.1
+
+accelerate_args:
+  step_scheduler_with_optimizer: false
+
+hydra:
+  run:
+    dir: outputs/ar/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: multirun/ar/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.override_dirname}
