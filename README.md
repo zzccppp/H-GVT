@@ -1,5 +1,7 @@
 # H-GVT: Hierarchical Graph VQ-Transformer
 
+Official implementation of **"Coarse-to-Fine Autoregression over Hierarchical Discrete Codes for Molecular Graph Generation"** (NeurIPS 2026, [paper link](https://neurips.cc/virtual/2026/loc/sydney/poster/153473)).
+
 Two-stage molecular graph generation on QM9, ZINC250k, MOSES and GuacaMol:
 
 1. **Stage 1** (`src/graph_var.py`): spectrally-regularized multi-scale VQ-VAE tokenizer (GVAR).
