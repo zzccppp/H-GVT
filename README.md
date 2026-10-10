@@ -16,6 +16,8 @@ source .venv/bin/activate
 
 ## Pretrained checkpoints
 
+Download [checkpoint.zip](https://drive.google.com/file/d/1UWWJM3UKVuc2Rwr6oTriFlg3_F2SRq8k/view?usp=sharing) (~1.8 GB) and extract it at the repository root:
+
 ```
 checkpoints/
   QM9/       vqvae.pt  latents.h5  ar.pt
